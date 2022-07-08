@@ -1,0 +1,9 @@
+﻿IF NOT EXISTS(SELECT * FROM sys.tables WHERE NAME = 'BlogPost')
+BEGIN
+	CREATE TABLE BlogPost(
+		Id INT IDENTITY(1,1) NOT NULL,
+		Title VARCHAR(100) NULL,
+		Contents VARCHAR(MAX) NULL,
+		[Timestamp] DATETIME NULL,
+		CategoryId INT NULL)
+END

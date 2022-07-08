@@ -1,0 +1,7 @@
+﻿IF NOT EXISTS(SELECT * FROM sys.tables WHERE NAME = 'BlogCategory')
+BEGIN
+	CREATE TABLE BlogCategory(
+		Id INT IDENTITY(1,1) NOT NULL,
+		[Name] VARCHAR(100) NULL)
+END
+
